@@ -1,30 +1,47 @@
 PODS:
   - Alamofire (5.1.0)
   - Promises (2.0.4)
+  - Protobuf (3.11.4)
   - SDWebImage (5.7.3):
     - SDWebImage/Core (= 5.7.3)
   - SDWebImage/Core (5.7.3)
   - SnapKit (5.0.1)
+  - SSZipArchive (2.2.2)
+  - SVGAPlayer (2.5.2):
+    - SVGAPlayer/Core (= 2.5.2)
+    - SVGAPlayer/ProtoFiles (= 2.5.2)
+  - SVGAPlayer/Core (2.5.2):
+    - SSZipArchive (>= 1.8.1)
+    - SVGAPlayer/ProtoFiles
+  - SVGAPlayer/ProtoFiles (2.5.2):
+    - Protobuf (~> 3.4)
 
 DEPENDENCIES:
   - Alamofire
   - Promises
   - SDWebImage
   - SnapKit
+  - SVGAPlayer
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - Promises
+    - Protobuf
     - SDWebImage
     - SnapKit
+    - SSZipArchive
+    - SVGAPlayer
 
 SPEC CHECKSUMS:
   Alamofire: 9d5c5f602928e512395b30950c5984eca840093c
   Promises: fcb83dc6be43294a8d30c343636ed1a45a8d2e0a
+  Protobuf: 176220c526ad8bd09ab1fb40a978eac3fef665f7
   SDWebImage: 97351f6582ceca541ea294ba66a1fcb342a331c2
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SSZipArchive: fa16b8cc4cdeceb698e5e5d9f67e9558532fbf23
+  SVGAPlayer: c666a7886b72ee77d494c49aa4fd61df175dd103
 
-PODFILE CHECKSUM: 8f77d1e481c4056c581b8891f8245c05e430c812
+PODFILE CHECKSUM: c9ec3557af669ca37762dbfab35d604a90aa9427
 
 COCOAPODS: 1.9.1

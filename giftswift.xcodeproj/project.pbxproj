@@ -30,6 +30,7 @@
 		0428E67D246138C700C48743 /* SVGAData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0428E67C246138C700C48743 /* SVGAData.swift */; };
 		04490F44246190A000D4816A /* v2-9d6cc73533f302e308b5b1ca5fac51df_1200x500.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04490F432461909F00D4816A /* v2-9d6cc73533f302e308b5b1ca5fac51df_1200x500.jpg */; };
 		04490F46246197DB00D4816A /* unnamed.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04490F45246197DA00D4816A /* unnamed.jpg */; };
+		04490F4A2461AEDB00D4816A /* NSData+Compression.m in Sources */ = {isa = PBXBuildFile; fileRef = 04490F492461AEDB00D4816A /* NSData+Compression.m */; };
 		04B3C07A2460E25500067A78 /* DanMuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B3C0792460E25500067A78 /* DanMuView.swift */; };
 		04B3C07C2460E2B100067A78 /* DanmuPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B3C07B2460E2B100067A78 /* DanmuPlayer.swift */; };
 		04CDC012245CAC58003152A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CDC011245CAC58003152A1 /* AppDelegate.swift */; };
@@ -109,6 +110,9 @@
 		0428E67C246138C700C48743 /* SVGAData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVGAData.swift; sourceTree = "<group>"; };
 		04490F432461909F00D4816A /* v2-9d6cc73533f302e308b5b1ca5fac51df_1200x500.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "v2-9d6cc73533f302e308b5b1ca5fac51df_1200x500.jpg"; sourceTree = "<group>"; };
 		04490F45246197DA00D4816A /* unnamed.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = unnamed.jpg; sourceTree = "<group>"; };
+		04490F472461AEDA00D4816A /* giftswift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "giftswift-Bridging-Header.h"; sourceTree = "<group>"; };
+		04490F482461AEDB00D4816A /* NSData+Compression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Compression.h"; sourceTree = "<group>"; };
+		04490F492461AEDB00D4816A /* NSData+Compression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Compression.m"; sourceTree = "<group>"; };
 		04B3C0792460E25500067A78 /* DanMuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanMuView.swift; sourceTree = "<group>"; };
 		04B3C07B2460E2B100067A78 /* DanmuPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanmuPlayer.swift; sourceTree = "<group>"; };
 		04CDC00E245CAC58003152A1 /* giftswift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = giftswift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -358,6 +362,7 @@
 			children = (
 				04CDC076245CD41D003152A1 /* pch.swift */,
 				0422C365245D6A4B00DDB0D0 /* Macro.swift */,
+				04490F472461AEDA00D4816A /* giftswift-Bridging-Header.h */,
 			);
 			path = global;
 			sourceTree = "<group>";
@@ -413,6 +418,8 @@
 		04CDC073245CC892003152A1 /* categary */ = {
 			isa = PBXGroup;
 			children = (
+				04490F482461AEDB00D4816A /* NSData+Compression.h */,
+				04490F492461AEDB00D4816A /* NSData+Compression.m */,
 				04CDC074245CCC89003152A1 /* KVCategary.swift */,
 			);
 			path = categary;
@@ -537,6 +544,7 @@
 				TargetAttributes = {
 					04CDC00D245CAC58003152A1 = {
 						CreatedOnToolsVersion = 11.4.1;
+						LastSwiftMigration = 1140;
 					};
 					04CDC023245CAC5A003152A1 = {
 						CreatedOnToolsVersion = 11.4.1;
@@ -740,6 +748,7 @@
 				04CDC083245CDB8C003152A1 /* Api.swift in Sources */,
 				0422C366245D6A4B00DDB0D0 /* Macro.swift in Sources */,
 				04CDC04F245CAD9C003152A1 /* KVViewController.swift in Sources */,
+				04490F4A2461AEDB00D4816A /* NSData+Compression.m in Sources */,
 				04CDC079245CD600003152A1 /* KVAnimation.swift in Sources */,
 				04CDC07C245CDA67003152A1 /* GiftListCell.swift in Sources */,
 				0422C36C245D887400DDB0D0 /* MsgPrensent.swift in Sources */,
@@ -927,6 +936,7 @@
 			baseConfigurationReference = 3474047FE86BDD9D3910ED76 /* Pods-giftswift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NF2C9USQ9Z;
 				INFOPLIST_FILE = giftswift/Info.plist;
@@ -937,6 +947,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kevin.app.-giftswift.giftswift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "giftswift/src/global/giftswift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -947,6 +959,7 @@
 			baseConfigurationReference = 5A57D1394DD61F9580A7D6E3 /* Pods-giftswift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NF2C9USQ9Z;
 				INFOPLIST_FILE = giftswift/Info.plist;
@@ -957,6 +970,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kevin.app.-giftswift.giftswift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "giftswift/src/global/giftswift-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

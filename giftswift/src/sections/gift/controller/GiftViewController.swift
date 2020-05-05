@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GiftViewController: KVViewController, KVViewDisplayContext, UITextFieldDelegate {
+class GiftViewController: KVViewController, KVViewDisplayContext, UITextFieldDelegate, SVGAPlayerDelegate {
 
     override var navigationBarHiddenWhenAppear: Bool { true }
     
@@ -28,9 +28,19 @@ class GiftViewController: KVViewController, KVViewDisplayContext, UITextFieldDel
     
     @IBOutlet weak var tfBottom: NSLayoutConstraint!
     
+    @IBOutlet weak var svgaButtton: UIButton!
+    
+    private var bg: UIImageView!
+    
     private let giftPlayer = GiftListPlayer()
     
     private let danmuPlayer = DanmuPlayer()
+    
+    private lazy var svgaPlayer = SVGAPlayer()
+    
+    private let svgaPresent = SVGAPresent()
+    
+    private var didMoveView = false
     
     private let autoSender = AutoSenderGift()
     
@@ -40,8 +50,8 @@ class GiftViewController: KVViewController, KVViewDisplayContext, UITextFieldDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let bg = UIImageView(image: UIImage(contentsOfFile: Bundle.main.path(forResource: "unnamed.jpg", ofType: nil) ?? ""))
+ 
+        bg = UIImageView(image: UIImage(contentsOfFile: Bundle.main.path(forResource: "unnamed.jpg", ofType: nil) ?? ""))
         bg.frame = self.view.bounds
         bg.isUserInteractionEnabled = false
         bg.contentMode = .scaleAspectFill
@@ -50,6 +60,20 @@ class GiftViewController: KVViewController, KVViewDisplayContext, UITextFieldDel
         tf.delegate = self
         NotificationCenter.default.addObserver(self, selector: #selector(keyBoaedWillShow(notifi:)), name:UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyBoaedWillHide(notifi:)), name:UIResponder.keyboardWillHideNotification, object: nil)
+        
+        svgaPlayer.frame = self.view.bounds
+        self.view.addSubview(svgaPlayer)
+        svgaPlayer.delegate = self
+        svgaPlayer.loops = 1
+        svgaPlayer.clearsAfterStop = true
+        svgaPlayer.isUserInteractionEnabled = false
+        
+        let ai = UIActivityIndicatorView(style: .whiteLarge)
+        svgaButtton.layer.cornerRadius = 22
+        svgaButtton.addSubview(ai)
+        ai.frame = svgaButtton.bounds
+        ai.hidesWhenStopped = true
+        ai.stopAnimating()
         
         initMsgListView()
         initGiftListView()
@@ -63,9 +87,11 @@ class GiftViewController: KVViewController, KVViewDisplayContext, UITextFieldDel
         msgListView?.tableView.backgroundColor = .clear
         danmuView.backgroundColor = .clear
         
+        self.view.sendSubviewToBack(svgaPlayer)
         self.view.sendSubviewToBack(giftListView!)
         self.view.sendSubviewToBack(tf)
         self.view.sendSubviewToBack(giftListView!.bgv)
+        self.view.sendSubviewToBack(svgaPlayer)
         self.view.sendSubviewToBack(giftListDisplayContainerView)
         self.view.sendSubviewToBack(danmuView)
         self.view.sendSubviewToBack(gifDisplayView!)
@@ -79,6 +105,7 @@ class GiftViewController: KVViewController, KVViewDisplayContext, UITextFieldDel
         _ = giftListView?.present?.loadGifts().then({ (data) in
             self.autoSender.gifts = data
         })
+
     }
     
     // MARK: -
@@ -165,6 +192,28 @@ class GiftViewController: KVViewController, KVViewDisplayContext, UITextFieldDel
         
     }
     
+    @IBAction func svgaAction(_ sender: Any) {
+        svgaButtton.isUserInteractionEnabled = false
+        svgaButtton.setTitle("", for: .normal)
+        _ = svgaButtton.subviews.map { (it) in
+            if let view = it as? UIActivityIndicatorView {
+                view.startAnimating()
+            }
+        }
+        svgaPresent.loadData().then { (item) in
+           self.svgaPlayer.videoItem = item!
+           self.svgaPlayer.startAnimation()
+        }.always {
+            self.svgaButtton.isUserInteractionEnabled = true
+            self.svgaButtton.setTitle("+", for: .normal)
+            _ = self.svgaButtton.subviews.map { (it) in
+                if let view = it as? UIActivityIndicatorView {
+                    view.stopAnimating()
+                }
+            }
+        }
+    }
+    
     @objc func swipeAction(_ sender: UISwipeGestureRecognizer) {
         let dismiss = sender.direction == .left
         UIView.kv_animate(animations: {
@@ -186,7 +235,36 @@ class GiftViewController: KVViewController, KVViewDisplayContext, UITextFieldDel
         return true
     }
     
+    // MARK: -
     
+    func svgaPlayerDidAnimated(toFrame frame: Int) {
+        if !didMoveView {
+            self.view.bringSubviewToFront(bg)
+            self.view.bringSubviewToFront(svgaPlayer)
+            didMoveView = true
+        }
+        
+    }
+    
+    func svgaPlayerDidAnimated(toPercentage percentage: CGFloat) {
+        
+    }
+    
+    func svgaPlayerDidFinishedAnimation(_ player: SVGAPlayer!) {
+        self.view.sendSubviewToBack(svgaPlayer)
+        self.view.sendSubviewToBack(giftListView!)
+        self.view.sendSubviewToBack(tf)
+        self.view.sendSubviewToBack(giftListView!.bgv)
+        self.view.sendSubviewToBack(svgaPlayer)
+        self.view.sendSubviewToBack(giftListDisplayContainerView)
+        self.view.sendSubviewToBack(danmuView)
+        self.view.sendSubviewToBack(gifDisplayView!)
+        self.view.sendSubviewToBack(msgListView!)
+        self.view.sendSubviewToBack(bg)
+        
+        didMoveView = false
+    }
+
     
     // MARK: -
     

@@ -15,3 +15,5 @@ import UIKit
 @_exported import SDWebImage
 
 @_exported import Alamofire
+
+@_exported import SVGAPlayer

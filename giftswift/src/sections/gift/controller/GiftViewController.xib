@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GiftViewController" customModule="giftswift" customModuleProvider="target">
             <connections>
+                <outlet property="svgaButtton" destination="fpB-BD-bu9" id="Ozc-9q-yPH"/>
                 <outlet property="tf" destination="Om9-Df-NFK" id="hvx-aG-iZf"/>
                 <outlet property="tfBottom" destination="XB9-MS-Lev" id="gTa-UX-Xge"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -70,12 +71,29 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" returnKeyType="send"/>
                 </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpB-BD-bu9">
+                    <rect key="frame" x="350" y="698" width="44" height="44"/>
+                    <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="duy-0y-Z1x"/>
+                        <constraint firstAttribute="width" constant="44" id="lLL-aV-9ga"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                    <state key="normal" title="+">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="svgaAction:" destination="-1" eventType="touchUpInside" id="sLt-sz-SCn"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="Mav-H3-EQ5" firstAttribute="leading" secondItem="Uoc-kD-XpM" secondAttribute="trailing" constant="20" id="62c-s6-CLj"/>
+                <constraint firstItem="Om9-Df-NFK" firstAttribute="top" secondItem="fpB-BD-bu9" secondAttribute="bottom" constant="80" id="7Sf-VT-OPi"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Mav-H3-EQ5" secondAttribute="trailing" id="Fk7-0p-CTu"/>
                 <constraint firstItem="Mav-H3-EQ5" firstAttribute="centerY" secondItem="yGz-dC-FA6" secondAttribute="centerY" id="GbI-DY-UYF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fpB-BD-bu9" secondAttribute="trailing" constant="20" id="Khr-PG-fYa"/>
                 <constraint firstItem="Mav-H3-EQ5" firstAttribute="height" secondItem="ZQ6-lz-l6s" secondAttribute="height" id="P5k-En-yn0"/>
                 <constraint firstItem="yGz-dC-FA6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="T0e-gS-ApN"/>
                 <constraint firstItem="Mav-H3-EQ5" firstAttribute="width" secondItem="yGz-dC-FA6" secondAttribute="width" id="UE2-JE-fw4"/>

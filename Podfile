@@ -14,6 +14,8 @@ target 'giftswift' do
   pod 'SDWebImage'
   
   pod 'Alamofire'
+  
+  pod 'SVGAPlayer'
 
   target 'giftswiftTests' do
     inherit! :search_paths

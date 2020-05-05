@@ -61,17 +61,29 @@ NSArray *items = @[
 
 struct SVGAData {
 
-    static func loadData() ->Promise<Any> {
+    static let parser = SVGAParser()
+    
+    static func loadData() ->Promise<SVGAVideoEntity?> {
         
+        let url = "https://github.com/yyued/SVGA-Samples/blob/master/rose.svga?raw=true"
         
+        return Promise<SVGAVideoEntity?> { (filfull, reject) in
+            
+            guard let theUrl = URL(string: url) else {
+                reject(KVError(msg: "url is null", code: -1))
+                KLog("加载svga失败")
+                return
+            }
+            
+            parser.parse(with: theUrl, completionBlock: { (entity) in
+                filfull(entity)
+                
+            }) { (error) in
+                KLog("解析svga失败")
+                reject(KVError(msg: "解析svga错误", code: -1))
+                
+            }
         
-        return Promise<Any> { (filfull, reject) in
-
-            
-            
-            
-//            AF.request(<#T##convertible: URLConvertible##URLConvertible#>)
-            
         }
         
     }
