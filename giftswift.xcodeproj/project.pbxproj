@@ -1,0 +1,1091 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0422C366245D6A4B00DDB0D0 /* Macro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422C365245D6A4B00DDB0D0 /* Macro.swift */; };
+		0422C368245D6A8B00DDB0D0 /* GiftData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422C367245D6A8B00DDB0D0 /* GiftData.swift */; };
+		0422C36A245D6C3100DDB0D0 /* KVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422C369245D6C3100DDB0D0 /* KVView.swift */; };
+		0422C36C245D887400DDB0D0 /* MsgPrensent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422C36B245D887400DDB0D0 /* MsgPrensent.swift */; };
+		0422C36E245D888B00DDB0D0 /* MsgData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422C36D245D888B00DDB0D0 /* MsgData.swift */; };
+		0422C370245D8FBF00DDB0D0 /* GifGiftDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422C36F245D8FBF00DDB0D0 /* GifGiftDisplayView.swift */; };
+		0422C372245D903C00DDB0D0 /* GifGiftDisplayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0422C371245D903C00DDB0D0 /* GifGiftDisplayView.xib */; };
+		0422C374245D909600DDB0D0 /* GiftPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422C373245D909600DDB0D0 /* GiftPlayer.swift */; };
+		0422C376245DA06F00DDB0D0 /* MsgListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422C375245DA06F00DDB0D0 /* MsgListView.swift */; };
+		0422C378245DA08C00DDB0D0 /* MsgListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0422C377245DA08C00DDB0D0 /* MsgListView.xib */; };
+		0422C37B245DAC7B00DDB0D0 /* WeakArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422C37A245DAC7B00DDB0D0 /* WeakArray.swift */; };
+		0422C37D245DACA200DDB0D0 /* WeakWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422C37C245DACA200DDB0D0 /* WeakWrapper.swift */; };
+		0422C380245DC01C00DDB0D0 /* MsgListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422C37E245DC01C00DDB0D0 /* MsgListCell.swift */; };
+		0422C381245DC01C00DDB0D0 /* MsgListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0422C37F245DC01C00DDB0D0 /* MsgListCell.xib */; };
+		0422C387245E95DC00DDB0D0 /* GiftListDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422C386245E95DC00DDB0D0 /* GiftListDisplayView.swift */; };
+		0422C389245E95E400DDB0D0 /* GiftListDisplayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0422C388245E95E400DDB0D0 /* GiftListDisplayView.xib */; };
+		0422C38B245E96C300DDB0D0 /* GiftItemDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422C38A245E96C300DDB0D0 /* GiftItemDisplayView.swift */; };
+		0422C38D245E96D200DDB0D0 /* GiftItemDisplayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0422C38C245E96D200DDB0D0 /* GiftItemDisplayView.xib */; };
+		0428E6792461276600C48743 /* photographer_compressed.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0428E6782461276600C48743 /* photographer_compressed.jpg */; };
+		0428E67B246137DE00C48743 /* SVGAPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0428E67A246137DE00C48743 /* SVGAPresent.swift */; };
+		0428E67D246138C700C48743 /* SVGAData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0428E67C246138C700C48743 /* SVGAData.swift */; };
+		04490F44246190A000D4816A /* v2-9d6cc73533f302e308b5b1ca5fac51df_1200x500.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04490F432461909F00D4816A /* v2-9d6cc73533f302e308b5b1ca5fac51df_1200x500.jpg */; };
+		04490F46246197DB00D4816A /* unnamed.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04490F45246197DA00D4816A /* unnamed.jpg */; };
+		04B3C07A2460E25500067A78 /* DanMuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B3C0792460E25500067A78 /* DanMuView.swift */; };
+		04B3C07C2460E2B100067A78 /* DanmuPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B3C07B2460E2B100067A78 /* DanmuPlayer.swift */; };
+		04CDC012245CAC58003152A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CDC011245CAC58003152A1 /* AppDelegate.swift */; };
+		04CDC014245CAC58003152A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CDC013245CAC58003152A1 /* SceneDelegate.swift */; };
+		04CDC016245CAC58003152A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CDC015245CAC58003152A1 /* ViewController.swift */; };
+		04CDC019245CAC58003152A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CDC017245CAC58003152A1 /* Main.storyboard */; };
+		04CDC01B245CAC5A003152A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04CDC01A245CAC5A003152A1 /* Assets.xcassets */; };
+		04CDC01E245CAC5A003152A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CDC01C245CAC5A003152A1 /* LaunchScreen.storyboard */; };
+		04CDC029245CAC5A003152A1 /* giftswiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CDC028245CAC5A003152A1 /* giftswiftTests.swift */; };
+		04CDC034245CAC5A003152A1 /* giftswiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CDC033245CAC5A003152A1 /* giftswiftUITests.swift */; };
+		04CDC04A245CACC4003152A1 /* KVNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CDC049245CACC4003152A1 /* KVNavigationController.swift */; };
+		04CDC04C245CAD4E003152A1 /* KVTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CDC04B245CAD4E003152A1 /* KVTabBarController.swift */; };
+		04CDC04F245CAD9C003152A1 /* KVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CDC04E245CAD9C003152A1 /* KVViewController.swift */; };
+		04CDC052245CAE45003152A1 /* KVHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CDC051245CAE45003152A1 /* KVHud.swift */; };
+		04CDC054245CB45E003152A1 /* KVStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CDC053245CB45E003152A1 /* KVStateView.swift */; };
+		04CDC057245CB803003152A1 /* KVTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CDC056245CB803003152A1 /* KVTableView.swift */; };
+		04CDC059245CB91B003152A1 /* KVListViewStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CDC058245CB91B003152A1 /* KVListViewStateView.swift */; };
+		04CDC05B245CB932003152A1 /* KVListViewStateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CDC05A245CB932003152A1 /* KVListViewStateView.xib */; };
+		04CDC05F245CBC29003152A1 /* GiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CDC05D245CBC29003152A1 /* GiftViewController.swift */; };
+		04CDC060245CBC29003152A1 /* GiftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CDC05E245CBC29003152A1 /* GiftViewController.xib */; };
+		04CDC062245CC104003152A1 /* KVCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CDC061245CC104003152A1 /* KVCollectionView.swift */; };
+		04CDC066245CC1E0003152A1 /* GiftListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CDC065245CC1E0003152A1 /* GiftListView.swift */; };
+		04CDC068245CC1E9003152A1 /* GiftListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CDC067245CC1E9003152A1 /* GiftListView.xib */; };
+		04CDC06B245CC2ED003152A1 /* KVBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CDC06A245CC2ED003152A1 /* KVBackgroundView.swift */; };
+		04CDC070245CC636003152A1 /* KVViewDisplayContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CDC06F245CC636003152A1 /* KVViewDisplayContext.swift */; };
+		04CDC075245CCC89003152A1 /* KVCategary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CDC074245CCC89003152A1 /* KVCategary.swift */; };
+		04CDC077245CD41D003152A1 /* pch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CDC076245CD41D003152A1 /* pch.swift */; };
+		04CDC079245CD600003152A1 /* KVAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CDC078245CD600003152A1 /* KVAnimation.swift */; };
+		04CDC07C245CDA67003152A1 /* GiftListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CDC07A245CDA67003152A1 /* GiftListCell.swift */; };
+		04CDC07D245CDA67003152A1 /* GiftListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CDC07B245CDA67003152A1 /* GiftListCell.xib */; };
+		04CDC083245CDB8C003152A1 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CDC082245CDB8C003152A1 /* Api.swift */; };
+		04CDC086245CDC21003152A1 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 04CDC085245CDC21003152A1 /* data.json */; };
+		04CDC088245CDF78003152A1 /* GiftPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CDC087245CDF78003152A1 /* GiftPresent.swift */; };
+		16D41698B5B584D3481A3D33 /* Pods_giftswift_giftswiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE041AA8920A8D2A437B3428 /* Pods_giftswift_giftswiftUITests.framework */; };
+		53E5AA42E190BEF6F5B39848 /* Pods_giftswiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73900A57A7AF8CD386DBF958 /* Pods_giftswiftTests.framework */; };
+		5B1ADC051B9B25FA7AB6FBA7 /* Pods_giftswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57F1F3553687EB826500ECB1 /* Pods_giftswift.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04CDC025245CAC5A003152A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04CDC006245CAC58003152A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04CDC00D245CAC58003152A1;
+			remoteInfo = giftswift;
+		};
+		04CDC030245CAC5A003152A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04CDC006245CAC58003152A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04CDC00D245CAC58003152A1;
+			remoteInfo = giftswift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0422C365245D6A4B00DDB0D0 /* Macro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Macro.swift; sourceTree = "<group>"; };
+		0422C367245D6A8B00DDB0D0 /* GiftData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftData.swift; sourceTree = "<group>"; };
+		0422C369245D6C3100DDB0D0 /* KVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVView.swift; sourceTree = "<group>"; };
+		0422C36B245D887400DDB0D0 /* MsgPrensent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsgPrensent.swift; sourceTree = "<group>"; };
+		0422C36D245D888B00DDB0D0 /* MsgData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsgData.swift; sourceTree = "<group>"; };
+		0422C36F245D8FBF00DDB0D0 /* GifGiftDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifGiftDisplayView.swift; sourceTree = "<group>"; };
+		0422C371245D903C00DDB0D0 /* GifGiftDisplayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GifGiftDisplayView.xib; sourceTree = "<group>"; };
+		0422C373245D909600DDB0D0 /* GiftPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftPlayer.swift; sourceTree = "<group>"; };
+		0422C375245DA06F00DDB0D0 /* MsgListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsgListView.swift; sourceTree = "<group>"; };
+		0422C377245DA08C00DDB0D0 /* MsgListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MsgListView.xib; sourceTree = "<group>"; };
+		0422C37A245DAC7B00DDB0D0 /* WeakArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakArray.swift; sourceTree = "<group>"; };
+		0422C37C245DACA200DDB0D0 /* WeakWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakWrapper.swift; sourceTree = "<group>"; };
+		0422C37E245DC01C00DDB0D0 /* MsgListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsgListCell.swift; sourceTree = "<group>"; };
+		0422C37F245DC01C00DDB0D0 /* MsgListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MsgListCell.xib; sourceTree = "<group>"; };
+		0422C386245E95DC00DDB0D0 /* GiftListDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftListDisplayView.swift; sourceTree = "<group>"; };
+		0422C388245E95E400DDB0D0 /* GiftListDisplayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GiftListDisplayView.xib; sourceTree = "<group>"; };
+		0422C38A245E96C300DDB0D0 /* GiftItemDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftItemDisplayView.swift; sourceTree = "<group>"; };
+		0422C38C245E96D200DDB0D0 /* GiftItemDisplayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GiftItemDisplayView.xib; sourceTree = "<group>"; };
+		0428E6782461276600C48743 /* photographer_compressed.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photographer_compressed.jpg; sourceTree = "<group>"; };
+		0428E67A246137DE00C48743 /* SVGAPresent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVGAPresent.swift; sourceTree = "<group>"; };
+		0428E67C246138C700C48743 /* SVGAData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVGAData.swift; sourceTree = "<group>"; };
+		04490F432461909F00D4816A /* v2-9d6cc73533f302e308b5b1ca5fac51df_1200x500.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "v2-9d6cc73533f302e308b5b1ca5fac51df_1200x500.jpg"; sourceTree = "<group>"; };
+		04490F45246197DA00D4816A /* unnamed.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = unnamed.jpg; sourceTree = "<group>"; };
+		04B3C0792460E25500067A78 /* DanMuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanMuView.swift; sourceTree = "<group>"; };
+		04B3C07B2460E2B100067A78 /* DanmuPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanmuPlayer.swift; sourceTree = "<group>"; };
+		04CDC00E245CAC58003152A1 /* giftswift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = giftswift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		04CDC011245CAC58003152A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../AppDelegate.swift; sourceTree = "<group>"; };
+		04CDC013245CAC58003152A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = ../../SceneDelegate.swift; sourceTree = "<group>"; };
+		04CDC015245CAC58003152A1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		04CDC018245CAC58003152A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		04CDC01A245CAC5A003152A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04CDC01D245CAC5A003152A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		04CDC01F245CAC5A003152A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04CDC024245CAC5A003152A1 /* giftswiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = giftswiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04CDC028245CAC5A003152A1 /* giftswiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = giftswiftTests.swift; sourceTree = "<group>"; };
+		04CDC02A245CAC5A003152A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04CDC02F245CAC5A003152A1 /* giftswiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = giftswiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04CDC033245CAC5A003152A1 /* giftswiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = giftswiftUITests.swift; sourceTree = "<group>"; };
+		04CDC035245CAC5A003152A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04CDC049245CACC4003152A1 /* KVNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVNavigationController.swift; sourceTree = "<group>"; };
+		04CDC04B245CAD4E003152A1 /* KVTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVTabBarController.swift; sourceTree = "<group>"; };
+		04CDC04E245CAD9C003152A1 /* KVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVViewController.swift; sourceTree = "<group>"; };
+		04CDC051245CAE45003152A1 /* KVHud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVHud.swift; sourceTree = "<group>"; };
+		04CDC053245CB45E003152A1 /* KVStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVStateView.swift; sourceTree = "<group>"; };
+		04CDC056245CB803003152A1 /* KVTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVTableView.swift; sourceTree = "<group>"; };
+		04CDC058245CB91B003152A1 /* KVListViewStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVListViewStateView.swift; sourceTree = "<group>"; };
+		04CDC05A245CB932003152A1 /* KVListViewStateView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KVListViewStateView.xib; sourceTree = "<group>"; };
+		04CDC05D245CBC29003152A1 /* GiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftViewController.swift; sourceTree = "<group>"; };
+		04CDC05E245CBC29003152A1 /* GiftViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GiftViewController.xib; sourceTree = "<group>"; };
+		04CDC061245CC104003152A1 /* KVCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVCollectionView.swift; sourceTree = "<group>"; };
+		04CDC065245CC1E0003152A1 /* GiftListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftListView.swift; sourceTree = "<group>"; };
+		04CDC067245CC1E9003152A1 /* GiftListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GiftListView.xib; sourceTree = "<group>"; };
+		04CDC06A245CC2ED003152A1 /* KVBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVBackgroundView.swift; sourceTree = "<group>"; };
+		04CDC06F245CC636003152A1 /* KVViewDisplayContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVViewDisplayContext.swift; sourceTree = "<group>"; };
+		04CDC074245CCC89003152A1 /* KVCategary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KVCategary.swift; sourceTree = "<group>"; };
+		04CDC076245CD41D003152A1 /* pch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pch.swift; sourceTree = "<group>"; };
+		04CDC078245CD600003152A1 /* KVAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVAnimation.swift; sourceTree = "<group>"; };
+		04CDC07A245CDA67003152A1 /* GiftListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftListCell.swift; sourceTree = "<group>"; };
+		04CDC07B245CDA67003152A1 /* GiftListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GiftListCell.xib; sourceTree = "<group>"; };
+		04CDC082245CDB8C003152A1 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		04CDC085245CDC21003152A1 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		04CDC087245CDF78003152A1 /* GiftPresent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftPresent.swift; sourceTree = "<group>"; };
+		29FECEB74E71B9EA905BAA96 /* Pods-giftswift-giftswiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-giftswift-giftswiftUITests.debug.xcconfig"; path = "Target Support Files/Pods-giftswift-giftswiftUITests/Pods-giftswift-giftswiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3474047FE86BDD9D3910ED76 /* Pods-giftswift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-giftswift.debug.xcconfig"; path = "Target Support Files/Pods-giftswift/Pods-giftswift.debug.xcconfig"; sourceTree = "<group>"; };
+		57F1F3553687EB826500ECB1 /* Pods_giftswift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_giftswift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A57D1394DD61F9580A7D6E3 /* Pods-giftswift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-giftswift.release.xcconfig"; path = "Target Support Files/Pods-giftswift/Pods-giftswift.release.xcconfig"; sourceTree = "<group>"; };
+		73900A57A7AF8CD386DBF958 /* Pods_giftswiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_giftswiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAF0A006C035B42A1EF11772 /* Pods-giftswift-giftswiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-giftswift-giftswiftUITests.release.xcconfig"; path = "Target Support Files/Pods-giftswift-giftswiftUITests/Pods-giftswift-giftswiftUITests.release.xcconfig"; sourceTree = "<group>"; };
+		EB7FFBB32DD5A36ADE63EED9 /* Pods-giftswiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-giftswiftTests.release.xcconfig"; path = "Target Support Files/Pods-giftswiftTests/Pods-giftswiftTests.release.xcconfig"; sourceTree = "<group>"; };
+		EF4B88923495E1B08B162B32 /* Pods-giftswiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-giftswiftTests.debug.xcconfig"; path = "Target Support Files/Pods-giftswiftTests/Pods-giftswiftTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FE041AA8920A8D2A437B3428 /* Pods_giftswift_giftswiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_giftswift_giftswiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04CDC00B245CAC58003152A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B1ADC051B9B25FA7AB6FBA7 /* Pods_giftswift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04CDC021245CAC5A003152A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53E5AA42E190BEF6F5B39848 /* Pods_giftswiftTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04CDC02C245CAC5A003152A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16D41698B5B584D3481A3D33 /* Pods_giftswift_giftswiftUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0422C379245DAC4900DDB0D0 /* foundation */ = {
+			isa = PBXGroup;
+			children = (
+				0422C37A245DAC7B00DDB0D0 /* WeakArray.swift */,
+				0422C37C245DACA200DDB0D0 /* WeakWrapper.swift */,
+			);
+			path = foundation;
+			sourceTree = "<group>";
+		};
+		0422C382245DFB8200DDB0D0 /* giftList */ = {
+			isa = PBXGroup;
+			children = (
+				04CDC065245CC1E0003152A1 /* GiftListView.swift */,
+				04CDC067245CC1E9003152A1 /* GiftListView.xib */,
+				04CDC07A245CDA67003152A1 /* GiftListCell.swift */,
+				04CDC07B245CDA67003152A1 /* GiftListCell.xib */,
+			);
+			path = giftList;
+			sourceTree = "<group>";
+		};
+		0422C383245DFB9100DDB0D0 /* msgList */ = {
+			isa = PBXGroup;
+			children = (
+				0422C375245DA06F00DDB0D0 /* MsgListView.swift */,
+				0422C377245DA08C00DDB0D0 /* MsgListView.xib */,
+				0422C37E245DC01C00DDB0D0 /* MsgListCell.swift */,
+				0422C37F245DC01C00DDB0D0 /* MsgListCell.xib */,
+			);
+			path = msgList;
+			sourceTree = "<group>";
+		};
+		0422C384245DFB9D00DDB0D0 /* player */ = {
+			isa = PBXGroup;
+			children = (
+				0422C36F245D8FBF00DDB0D0 /* GifGiftDisplayView.swift */,
+				0422C371245D903C00DDB0D0 /* GifGiftDisplayView.xib */,
+				0422C386245E95DC00DDB0D0 /* GiftListDisplayView.swift */,
+				0422C388245E95E400DDB0D0 /* GiftListDisplayView.xib */,
+				0422C38A245E96C300DDB0D0 /* GiftItemDisplayView.swift */,
+				0422C38C245E96D200DDB0D0 /* GiftItemDisplayView.xib */,
+			);
+			path = player;
+			sourceTree = "<group>";
+		};
+		0422C385245DFBAD00DDB0D0 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				04CDC05D245CBC29003152A1 /* GiftViewController.swift */,
+				04CDC05E245CBC29003152A1 /* GiftViewController.xib */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		04B3C0782460E21100067A78 /* danmu */ = {
+			isa = PBXGroup;
+			children = (
+				04B3C0792460E25500067A78 /* DanMuView.swift */,
+			);
+			path = danmu;
+			sourceTree = "<group>";
+		};
+		04CDC005245CAC58003152A1 = {
+			isa = PBXGroup;
+			children = (
+				04CDC010245CAC58003152A1 /* giftswift */,
+				04CDC027245CAC5A003152A1 /* giftswiftTests */,
+				04CDC032245CAC5A003152A1 /* giftswiftUITests */,
+				04CDC00F245CAC58003152A1 /* Products */,
+				340376900C25E7533E3F994A /* Pods */,
+				834267A5D93CB9922564CFED /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		04CDC00F245CAC58003152A1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04CDC00E245CAC58003152A1 /* giftswift.app */,
+				04CDC024245CAC5A003152A1 /* giftswiftTests.xctest */,
+				04CDC02F245CAC5A003152A1 /* giftswiftUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04CDC010245CAC58003152A1 /* giftswift */ = {
+			isa = PBXGroup;
+			children = (
+				04CDC084245CDC16003152A1 /* resource */,
+				04CDC041245CAC76003152A1 /* src */,
+				04CDC015245CAC58003152A1 /* ViewController.swift */,
+				04CDC017245CAC58003152A1 /* Main.storyboard */,
+				04CDC01A245CAC5A003152A1 /* Assets.xcassets */,
+				04CDC01C245CAC5A003152A1 /* LaunchScreen.storyboard */,
+				04CDC01F245CAC5A003152A1 /* Info.plist */,
+			);
+			path = giftswift;
+			sourceTree = "<group>";
+		};
+		04CDC027245CAC5A003152A1 /* giftswiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				04CDC028245CAC5A003152A1 /* giftswiftTests.swift */,
+				04CDC02A245CAC5A003152A1 /* Info.plist */,
+			);
+			path = giftswiftTests;
+			sourceTree = "<group>";
+		};
+		04CDC032245CAC5A003152A1 /* giftswiftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				04CDC033245CAC5A003152A1 /* giftswiftUITests.swift */,
+				04CDC035245CAC5A003152A1 /* Info.plist */,
+			);
+			path = giftswiftUITests;
+			sourceTree = "<group>";
+		};
+		04CDC041245CAC76003152A1 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				04CDC044245CAC76003152A1 /* core */,
+				04CDC042245CAC76003152A1 /* compoents */,
+				04CDC043245CAC76003152A1 /* sections */,
+				04CDC045245CAC76003152A1 /* appDelegate */,
+				04CDC046245CAC76003152A1 /* global */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		04CDC042245CAC76003152A1 /* compoents */ = {
+			isa = PBXGroup;
+			children = (
+				04CDC082245CDB8C003152A1 /* Api.swift */,
+				0422C367245D6A8B00DDB0D0 /* GiftData.swift */,
+				0422C36D245D888B00DDB0D0 /* MsgData.swift */,
+				0428E67C246138C700C48743 /* SVGAData.swift */,
+			);
+			path = compoents;
+			sourceTree = "<group>";
+		};
+		04CDC043245CAC76003152A1 /* sections */ = {
+			isa = PBXGroup;
+			children = (
+				04CDC05C245CBC0A003152A1 /* gift */,
+			);
+			path = sections;
+			sourceTree = "<group>";
+		};
+		04CDC044245CAC76003152A1 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				0422C379245DAC4900DDB0D0 /* foundation */,
+				04CDC073245CC892003152A1 /* categary */,
+				04CDC06C245CC5D0003152A1 /* view */,
+				04CDC04D245CAD6A003152A1 /* controller */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		04CDC045245CAC76003152A1 /* appDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				04CDC011245CAC58003152A1 /* AppDelegate.swift */,
+				04CDC013245CAC58003152A1 /* SceneDelegate.swift */,
+			);
+			path = appDelegate;
+			sourceTree = "<group>";
+		};
+		04CDC046245CAC76003152A1 /* global */ = {
+			isa = PBXGroup;
+			children = (
+				04CDC076245CD41D003152A1 /* pch.swift */,
+				0422C365245D6A4B00DDB0D0 /* Macro.swift */,
+			);
+			path = global;
+			sourceTree = "<group>";
+		};
+		04CDC04D245CAD6A003152A1 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				04CDC04E245CAD9C003152A1 /* KVViewController.swift */,
+				04CDC049245CACC4003152A1 /* KVNavigationController.swift */,
+				04CDC04B245CAD4E003152A1 /* KVTabBarController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		04CDC05C245CBC0A003152A1 /* gift */ = {
+			isa = PBXGroup;
+			children = (
+				0422C385245DFBAD00DDB0D0 /* controller */,
+				04CDC07E245CDAE0003152A1 /* present */,
+				04CDC063245CC1C0003152A1 /* view */,
+			);
+			path = gift;
+			sourceTree = "<group>";
+		};
+		04CDC063245CC1C0003152A1 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				04B3C0782460E21100067A78 /* danmu */,
+				0422C384245DFB9D00DDB0D0 /* player */,
+				0422C383245DFB9100DDB0D0 /* msgList */,
+				0422C382245DFB8200DDB0D0 /* giftList */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		04CDC06C245CC5D0003152A1 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				04CDC053245CB45E003152A1 /* KVStateView.swift */,
+				04CDC06F245CC636003152A1 /* KVViewDisplayContext.swift */,
+				04CDC051245CAE45003152A1 /* KVHud.swift */,
+				04CDC058245CB91B003152A1 /* KVListViewStateView.swift */,
+				04CDC05A245CB932003152A1 /* KVListViewStateView.xib */,
+				04CDC06A245CC2ED003152A1 /* KVBackgroundView.swift */,
+				04CDC056245CB803003152A1 /* KVTableView.swift */,
+				04CDC061245CC104003152A1 /* KVCollectionView.swift */,
+				04CDC078245CD600003152A1 /* KVAnimation.swift */,
+				0422C369245D6C3100DDB0D0 /* KVView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		04CDC073245CC892003152A1 /* categary */ = {
+			isa = PBXGroup;
+			children = (
+				04CDC074245CCC89003152A1 /* KVCategary.swift */,
+			);
+			path = categary;
+			sourceTree = "<group>";
+		};
+		04CDC07E245CDAE0003152A1 /* present */ = {
+			isa = PBXGroup;
+			children = (
+				04CDC087245CDF78003152A1 /* GiftPresent.swift */,
+				0422C36B245D887400DDB0D0 /* MsgPrensent.swift */,
+				0422C373245D909600DDB0D0 /* GiftPlayer.swift */,
+				04B3C07B2460E2B100067A78 /* DanmuPlayer.swift */,
+				0428E67A246137DE00C48743 /* SVGAPresent.swift */,
+			);
+			path = present;
+			sourceTree = "<group>";
+		};
+		04CDC084245CDC16003152A1 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				04490F45246197DA00D4816A /* unnamed.jpg */,
+				04490F432461909F00D4816A /* v2-9d6cc73533f302e308b5b1ca5fac51df_1200x500.jpg */,
+				0428E6782461276600C48743 /* photographer_compressed.jpg */,
+				04CDC085245CDC21003152A1 /* data.json */,
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
+		340376900C25E7533E3F994A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3474047FE86BDD9D3910ED76 /* Pods-giftswift.debug.xcconfig */,
+				5A57D1394DD61F9580A7D6E3 /* Pods-giftswift.release.xcconfig */,
+				29FECEB74E71B9EA905BAA96 /* Pods-giftswift-giftswiftUITests.debug.xcconfig */,
+				BAF0A006C035B42A1EF11772 /* Pods-giftswift-giftswiftUITests.release.xcconfig */,
+				EF4B88923495E1B08B162B32 /* Pods-giftswiftTests.debug.xcconfig */,
+				EB7FFBB32DD5A36ADE63EED9 /* Pods-giftswiftTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		834267A5D93CB9922564CFED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				57F1F3553687EB826500ECB1 /* Pods_giftswift.framework */,
+				FE041AA8920A8D2A437B3428 /* Pods_giftswift_giftswiftUITests.framework */,
+				73900A57A7AF8CD386DBF958 /* Pods_giftswiftTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		04CDC00D245CAC58003152A1 /* giftswift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04CDC038245CAC5A003152A1 /* Build configuration list for PBXNativeTarget "giftswift" */;
+			buildPhases = (
+				E49F8B5296EB8C972AECC4C0 /* [CP] Check Pods Manifest.lock */,
+				04CDC00A245CAC58003152A1 /* Sources */,
+				04CDC00B245CAC58003152A1 /* Frameworks */,
+				04CDC00C245CAC58003152A1 /* Resources */,
+				749F75F32D571A553402CE60 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = giftswift;
+			productName = giftswift;
+			productReference = 04CDC00E245CAC58003152A1 /* giftswift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		04CDC023245CAC5A003152A1 /* giftswiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04CDC03B245CAC5A003152A1 /* Build configuration list for PBXNativeTarget "giftswiftTests" */;
+			buildPhases = (
+				30F40377D510CCA07E2979C2 /* [CP] Check Pods Manifest.lock */,
+				04CDC020245CAC5A003152A1 /* Sources */,
+				04CDC021245CAC5A003152A1 /* Frameworks */,
+				04CDC022245CAC5A003152A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04CDC026245CAC5A003152A1 /* PBXTargetDependency */,
+			);
+			name = giftswiftTests;
+			productName = giftswiftTests;
+			productReference = 04CDC024245CAC5A003152A1 /* giftswiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		04CDC02E245CAC5A003152A1 /* giftswiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04CDC03E245CAC5A003152A1 /* Build configuration list for PBXNativeTarget "giftswiftUITests" */;
+			buildPhases = (
+				60D7FD9C3212D89E8600666C /* [CP] Check Pods Manifest.lock */,
+				04CDC02B245CAC5A003152A1 /* Sources */,
+				04CDC02C245CAC5A003152A1 /* Frameworks */,
+				04CDC02D245CAC5A003152A1 /* Resources */,
+				8880B0525DF8BA34E76338E0 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04CDC031245CAC5A003152A1 /* PBXTargetDependency */,
+			);
+			name = giftswiftUITests;
+			productName = giftswiftUITests;
+			productReference = 04CDC02F245CAC5A003152A1 /* giftswiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04CDC006245CAC58003152A1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = kevin;
+				TargetAttributes = {
+					04CDC00D245CAC58003152A1 = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+					04CDC023245CAC5A003152A1 = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = 04CDC00D245CAC58003152A1;
+					};
+					04CDC02E245CAC5A003152A1 = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = 04CDC00D245CAC58003152A1;
+					};
+				};
+			};
+			buildConfigurationList = 04CDC009245CAC58003152A1 /* Build configuration list for PBXProject "giftswift" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 04CDC005245CAC58003152A1;
+			productRefGroup = 04CDC00F245CAC58003152A1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04CDC00D245CAC58003152A1 /* giftswift */,
+				04CDC023245CAC5A003152A1 /* giftswiftTests */,
+				04CDC02E245CAC5A003152A1 /* giftswiftUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		04CDC00C245CAC58003152A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04CDC07D245CDA67003152A1 /* GiftListCell.xib in Resources */,
+				04CDC068245CC1E9003152A1 /* GiftListView.xib in Resources */,
+				04490F46246197DB00D4816A /* unnamed.jpg in Resources */,
+				04CDC01E245CAC5A003152A1 /* LaunchScreen.storyboard in Resources */,
+				0422C381245DC01C00DDB0D0 /* MsgListCell.xib in Resources */,
+				04CDC086245CDC21003152A1 /* data.json in Resources */,
+				04CDC05B245CB932003152A1 /* KVListViewStateView.xib in Resources */,
+				04CDC060245CBC29003152A1 /* GiftViewController.xib in Resources */,
+				04CDC01B245CAC5A003152A1 /* Assets.xcassets in Resources */,
+				0422C38D245E96D200DDB0D0 /* GiftItemDisplayView.xib in Resources */,
+				04CDC019245CAC58003152A1 /* Main.storyboard in Resources */,
+				0422C378245DA08C00DDB0D0 /* MsgListView.xib in Resources */,
+				0428E6792461276600C48743 /* photographer_compressed.jpg in Resources */,
+				0422C372245D903C00DDB0D0 /* GifGiftDisplayView.xib in Resources */,
+				0422C389245E95E400DDB0D0 /* GiftListDisplayView.xib in Resources */,
+				04490F44246190A000D4816A /* v2-9d6cc73533f302e308b5b1ca5fac51df_1200x500.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04CDC022245CAC5A003152A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04CDC02D245CAC5A003152A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		30F40377D510CCA07E2979C2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-giftswiftTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		60D7FD9C3212D89E8600666C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-giftswift-giftswiftUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		749F75F32D571A553402CE60 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-giftswift/Pods-giftswift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-giftswift/Pods-giftswift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-giftswift/Pods-giftswift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8880B0525DF8BA34E76338E0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-giftswift-giftswiftUITests/Pods-giftswift-giftswiftUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-giftswift-giftswiftUITests/Pods-giftswift-giftswiftUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-giftswift-giftswiftUITests/Pods-giftswift-giftswiftUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E49F8B5296EB8C972AECC4C0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-giftswift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04CDC00A245CAC58003152A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04CDC04A245CACC4003152A1 /* KVNavigationController.swift in Sources */,
+				04B3C07A2460E25500067A78 /* DanMuView.swift in Sources */,
+				0422C37B245DAC7B00DDB0D0 /* WeakArray.swift in Sources */,
+				0422C36E245D888B00DDB0D0 /* MsgData.swift in Sources */,
+				04CDC088245CDF78003152A1 /* GiftPresent.swift in Sources */,
+				04CDC062245CC104003152A1 /* KVCollectionView.swift in Sources */,
+				0422C376245DA06F00DDB0D0 /* MsgListView.swift in Sources */,
+				04CDC054245CB45E003152A1 /* KVStateView.swift in Sources */,
+				0428E67D246138C700C48743 /* SVGAData.swift in Sources */,
+				04CDC016245CAC58003152A1 /* ViewController.swift in Sources */,
+				04CDC05F245CBC29003152A1 /* GiftViewController.swift in Sources */,
+				04CDC012245CAC58003152A1 /* AppDelegate.swift in Sources */,
+				0428E67B246137DE00C48743 /* SVGAPresent.swift in Sources */,
+				04CDC077245CD41D003152A1 /* pch.swift in Sources */,
+				04CDC075245CCC89003152A1 /* KVCategary.swift in Sources */,
+				0422C38B245E96C300DDB0D0 /* GiftItemDisplayView.swift in Sources */,
+				04CDC014245CAC58003152A1 /* SceneDelegate.swift in Sources */,
+				04CDC059245CB91B003152A1 /* KVListViewStateView.swift in Sources */,
+				04CDC04C245CAD4E003152A1 /* KVTabBarController.swift in Sources */,
+				0422C380245DC01C00DDB0D0 /* MsgListCell.swift in Sources */,
+				04CDC052245CAE45003152A1 /* KVHud.swift in Sources */,
+				04CDC083245CDB8C003152A1 /* Api.swift in Sources */,
+				0422C366245D6A4B00DDB0D0 /* Macro.swift in Sources */,
+				04CDC04F245CAD9C003152A1 /* KVViewController.swift in Sources */,
+				04CDC079245CD600003152A1 /* KVAnimation.swift in Sources */,
+				04CDC07C245CDA67003152A1 /* GiftListCell.swift in Sources */,
+				0422C36C245D887400DDB0D0 /* MsgPrensent.swift in Sources */,
+				04CDC070245CC636003152A1 /* KVViewDisplayContext.swift in Sources */,
+				0422C37D245DACA200DDB0D0 /* WeakWrapper.swift in Sources */,
+				0422C36A245D6C3100DDB0D0 /* KVView.swift in Sources */,
+				04CDC057245CB803003152A1 /* KVTableView.swift in Sources */,
+				04CDC066245CC1E0003152A1 /* GiftListView.swift in Sources */,
+				04B3C07C2460E2B100067A78 /* DanmuPlayer.swift in Sources */,
+				0422C370245D8FBF00DDB0D0 /* GifGiftDisplayView.swift in Sources */,
+				04CDC06B245CC2ED003152A1 /* KVBackgroundView.swift in Sources */,
+				0422C374245D909600DDB0D0 /* GiftPlayer.swift in Sources */,
+				0422C387245E95DC00DDB0D0 /* GiftListDisplayView.swift in Sources */,
+				0422C368245D6A8B00DDB0D0 /* GiftData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04CDC020245CAC5A003152A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04CDC029245CAC5A003152A1 /* giftswiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04CDC02B245CAC5A003152A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04CDC034245CAC5A003152A1 /* giftswiftUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04CDC026245CAC5A003152A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04CDC00D245CAC58003152A1 /* giftswift */;
+			targetProxy = 04CDC025245CAC5A003152A1 /* PBXContainerItemProxy */;
+		};
+		04CDC031245CAC5A003152A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04CDC00D245CAC58003152A1 /* giftswift */;
+			targetProxy = 04CDC030245CAC5A003152A1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		04CDC017245CAC58003152A1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04CDC018245CAC58003152A1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		04CDC01C245CAC5A003152A1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04CDC01D245CAC5A003152A1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		04CDC036245CAC5A003152A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		04CDC037245CAC5A003152A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		04CDC039245CAC5A003152A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3474047FE86BDD9D3910ED76 /* Pods-giftswift.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NF2C9USQ9Z;
+				INFOPLIST_FILE = giftswift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kevin.app.-giftswift.giftswift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		04CDC03A245CAC5A003152A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A57D1394DD61F9580A7D6E3 /* Pods-giftswift.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NF2C9USQ9Z;
+				INFOPLIST_FILE = giftswift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kevin.app.-giftswift.giftswift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		04CDC03C245CAC5A003152A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF4B88923495E1B08B162B32 /* Pods-giftswiftTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = giftswiftTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kevin.app.-giftswift.giftswiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/giftswift.app/giftswift";
+			};
+			name = Debug;
+		};
+		04CDC03D245CAC5A003152A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB7FFBB32DD5A36ADE63EED9 /* Pods-giftswiftTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = giftswiftTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kevin.app.-giftswift.giftswiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/giftswift.app/giftswift";
+			};
+			name = Release;
+		};
+		04CDC03F245CAC5A003152A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29FECEB74E71B9EA905BAA96 /* Pods-giftswift-giftswiftUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = giftswiftUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kevin.app.-giftswift.giftswiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = giftswift;
+			};
+			name = Debug;
+		};
+		04CDC040245CAC5A003152A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BAF0A006C035B42A1EF11772 /* Pods-giftswift-giftswiftUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = giftswiftUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kevin.app.-giftswift.giftswiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = giftswift;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04CDC009245CAC58003152A1 /* Build configuration list for PBXProject "giftswift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04CDC036245CAC5A003152A1 /* Debug */,
+				04CDC037245CAC5A003152A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04CDC038245CAC5A003152A1 /* Build configuration list for PBXNativeTarget "giftswift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04CDC039245CAC5A003152A1 /* Debug */,
+				04CDC03A245CAC5A003152A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04CDC03B245CAC5A003152A1 /* Build configuration list for PBXNativeTarget "giftswiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04CDC03C245CAC5A003152A1 /* Debug */,
+				04CDC03D245CAC5A003152A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04CDC03E245CAC5A003152A1 /* Build configuration list for PBXNativeTarget "giftswiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04CDC03F245CAC5A003152A1 /* Debug */,
+				04CDC040245CAC5A003152A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 04CDC006245CAC58003152A1 /* Project object */;
+}

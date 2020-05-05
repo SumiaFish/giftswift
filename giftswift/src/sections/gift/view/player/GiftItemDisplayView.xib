@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="GiftItemDisplayView" customModule="giftswift" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fpv-DB-l0W">
+                    <rect key="frame" x="8" y="8" width="84" height="84"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Fpv-DB-l0W" secondAttribute="height" id="Imi-14-YdR"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bay-82-WzI">
+                    <rect key="frame" x="270" y="8" width="84" height="84"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="bay-82-WzI" secondAttribute="height" id="Rax-Nh-qE8"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RHe-43-Nrn">
+                    <rect key="frame" x="100" y="8" width="170" height="42"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xai-q5-3yA">
+                    <rect key="frame" x="100" y="50" width="170" height="42"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="bay-82-WzI" secondAttribute="bottom" constant="8" id="0pd-XF-F3i"/>
+                <constraint firstItem="Xai-q5-3yA" firstAttribute="height" secondItem="RHe-43-Nrn" secondAttribute="height" id="7DA-Gg-l3A"/>
+                <constraint firstItem="Xai-q5-3yA" firstAttribute="leading" secondItem="RHe-43-Nrn" secondAttribute="leading" id="945-YA-k3R"/>
+                <constraint firstItem="RHe-43-Nrn" firstAttribute="leading" secondItem="Fpv-DB-l0W" secondAttribute="trailing" constant="8" id="CNF-QM-uV4"/>
+                <constraint firstItem="Fpv-DB-l0W" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="-8" id="JYH-X5-gg4"/>
+                <constraint firstItem="Xai-q5-3yA" firstAttribute="top" secondItem="RHe-43-Nrn" secondAttribute="bottom" id="KKk-oh-cn2"/>
+                <constraint firstItem="RHe-43-Nrn" firstAttribute="top" secondItem="Fpv-DB-l0W" secondAttribute="top" id="Kdl-aV-DTM"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="bay-82-WzI" secondAttribute="trailing" constant="60" id="QlD-2u-D1o"/>
+                <constraint firstItem="Fpv-DB-l0W" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="S2V-bU-m5k"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Fpv-DB-l0W" secondAttribute="bottom" constant="8" id="STR-49-bv8"/>
+                <constraint firstItem="bay-82-WzI" firstAttribute="leading" secondItem="RHe-43-Nrn" secondAttribute="trailing" id="Ul2-Yd-qUS"/>
+                <constraint firstItem="Fpv-DB-l0W" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="XcF-Fs-tGc"/>
+                <constraint firstItem="RHe-43-Nrn" firstAttribute="height" secondItem="Fpv-DB-l0W" secondAttribute="height" multiplier="1:2" id="nfV-G5-lZO"/>
+                <constraint firstItem="bay-82-WzI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="rX5-Lp-14S"/>
+                <constraint firstItem="bay-82-WzI" firstAttribute="leading" secondItem="Xai-q5-3yA" secondAttribute="trailing" id="yaM-tr-qom"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="avatarView" destination="Fpv-DB-l0W" id="0z9-fg-gRJ"/>
+                <outlet property="giftView" destination="bay-82-WzI" id="iTx-cj-Qjp"/>
+                <outlet property="gnameLab" destination="Xai-q5-3yA" id="7o8-1r-xEX"/>
+                <outlet property="nameLab" destination="RHe-43-Nrn" id="bKG-3P-mkY"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="153.34821428571428"/>
+        </view>
+    </objects>
+</document>

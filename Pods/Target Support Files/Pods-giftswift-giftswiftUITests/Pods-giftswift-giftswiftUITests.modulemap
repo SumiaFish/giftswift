@@ -1,0 +1,6 @@
+framework module Pods_giftswift_giftswiftUITests {
+  umbrella header "Pods-giftswift-giftswiftUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
