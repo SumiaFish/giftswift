@@ -10,6 +10,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GiftViewController" customModule="giftswift" customModuleProvider="target">
             <connections>
+                <outlet property="ascButton" destination="Uoc-kD-XpM" id="EvV-Lo-ICT"/>
+                <outlet property="autoSenderButton" destination="NE7-0d-b86" id="UoU-pp-6YJ"/>
+                <outlet property="dropButton" destination="ZQ6-lz-l6s" id="yUe-0d-TeW"/>
+                <outlet property="keepButton" destination="Mav-H3-EQ5" id="Bm2-oI-h5u"/>
                 <outlet property="svgaButtton" destination="fpB-BD-bu9" id="Ozc-9q-yPH"/>
                 <outlet property="tf" destination="Om9-Df-NFK" id="hvx-aG-iZf"/>
                 <outlet property="tfBottom" destination="XB9-MS-Lev" id="u2G-Jq-Hxy"/>

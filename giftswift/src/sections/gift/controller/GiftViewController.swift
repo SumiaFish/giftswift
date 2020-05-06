@@ -32,6 +32,14 @@ class GiftViewController: KVViewController, KVViewDisplayContext, UITextFieldDel
     
     @IBOutlet weak var svgaButtton: UIButton!
         
+    @IBOutlet weak var autoSenderButton: UIButton!
+    
+    @IBOutlet weak var dropButton: UIButton!
+    
+    @IBOutlet weak var keepButton: UIButton!
+    
+    @IBOutlet weak var ascButton: UIButton!
+    
     private var bg: UIImageView!
     
     private let giftPlayer = GiftListPlayer()
@@ -90,6 +98,8 @@ class GiftViewController: KVViewController, KVViewDisplayContext, UITextFieldDel
             make.right.equalToSuperview()
         }
         
+        ascButton.isSelected = true
+        
         initMsgListView()
         initGiftListView()
         initGifDisplayView()
@@ -113,6 +123,7 @@ class GiftViewController: KVViewController, KVViewDisplayContext, UITextFieldDel
             self.autoSender.gifts = data
         })
 
+        
     }
     
     // MARK: -
@@ -174,23 +185,33 @@ class GiftViewController: KVViewController, KVViewDisplayContext, UITextFieldDel
         giftListView?.display(isDisplay: !(giftListView?.isDisplay ?? true))
     }
     
-    @IBAction func ascAction(_ sender: Any) {
+    @IBAction func ascAction(_ sender: UIButton) {
         giftPlayer.animationType = .asc
-        
+        selecte(button: sender)
     }
     
-    @IBAction func keepAction(_ sender: Any) {
+    @IBAction func keepAction(_ sender: UIButton) {
         giftPlayer.animationType = .keep
-        
+        selecte(button: sender)
     }
     
-    @IBAction func dropAction(_ sender: Any) {
+    @IBAction func dropAction(_ sender: UIButton) {
         giftPlayer.animationType = .drop
-        
+        selecte(button: sender)
+    }
+    
+    func selecte(button: UIButton) {
+        ascButton.isSelected = false
+        keepButton.isSelected = false
+        dropButton.isSelected = false
+        button.isSelected = true
     }
     
     @IBAction func autoSennderAction(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
+        autoSender.onStateChange = { [weak self] isRun in
+            self?.autoSenderButton.isSelected = isRun
+        }
         if sender.isSelected {
             autoSender.start()
         } else {

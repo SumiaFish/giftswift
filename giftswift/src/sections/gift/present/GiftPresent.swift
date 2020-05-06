@@ -111,11 +111,19 @@ class GiftListPresent: NSObject {
 
 class AutoSenderGift: NSObject {
     
+    var onStateChange: ((_ isRun: Bool)->Void)?
+    
     var gifts: [Gift] = []
     
     var queue = OperationQueue()
     
     let sem = DispatchSemaphore(value: 1)
+    
+    var isRun: Bool = false {
+        didSet {
+            onStateChange?(isRun)
+        }
+    }
         
     func start() {
 
@@ -124,13 +132,13 @@ class AutoSenderGift: NSObject {
             return
         }
         
+        stop()
+        isRun = true
         DispatchQueue.global().async {
             self.sem.wait()
             defer {
                 self.sem.signal()
             }
-            
-            self.stop()
             self.todo()
         }
    
@@ -139,12 +147,17 @@ class AutoSenderGift: NSObject {
         
         
     func stop() {
+        isRun = false
         queue.cancelAllOperations()
     }
     
     func todo() {
         
         for _ in 0..<500 {
+            if !self.isRun  {
+                break;
+            }
+            
             let idx = getRandom(from: 6, to: self.gifts.count-1)
             if idx == 6 {
                 continue
@@ -177,21 +190,13 @@ class AutoSenderGift: NSObject {
             
                 text += string ?? ""
             }
-            
+
             queue.addOperation {
                 let _ = MsgManager.sharedInstance.sendMsg(msg: GiftMsg(id: UUID().uuidString, text: text, gift: gift, receiveTime: Date().timeIntervalSince1970))
             }
         }
         
     }
-    
-}
-
-
-class SVGAGiftPresent: NSObject {
-    
-    
-    
     
 }
 

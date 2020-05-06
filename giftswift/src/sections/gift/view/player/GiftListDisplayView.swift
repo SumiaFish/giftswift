@@ -38,6 +38,9 @@ class GiftListDisplayView: UIView, GiftRenderListViewProtocol {
     func play(giftMsgs: [GiftMsg], player: GiftPlayerProtocol) {
         
         self.updateData(giftMsgs: giftMsgs, player: player)
+        self.layoutItems(animate: true, {
+            
+        })
         
         let op = GiftDisplayViewOpration { [weak self] (complete) in
             
