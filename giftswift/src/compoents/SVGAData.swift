@@ -69,22 +69,54 @@ struct SVGAData {
         
         return Promise<SVGAVideoEntity?> { (filfull, reject) in
             
-            guard let theUrl = URL(string: url) else {
-                reject(KVError(msg: "url is null", code: -1))
+            // 真机上下载svga文件失败, 资源是放在github上的, 先放在本地试试
+            let path = Bundle.main.path(forResource: "rose.svga", ofType: nil)
+            guard let data = try? Data(contentsOf: URL(fileURLWithPath: path ?? "")) else {
+                reject(KVError(msg: "加载svga失败", code: -1))
                 KLog("加载svga失败")
                 return
             }
             
-            parser.parse(with: theUrl, completionBlock: { (entity) in
+            parser.parse(with: data, cacheKey: url, completionBlock: { (entity) in
                 filfull(entity)
-                
+
             }) { (error) in
-                KLog("解析svga失败")
+                KLog("解析svga失败, \(error)")
                 reject(KVError(msg: "解析svga错误", code: -1))
-                
             }
-        
+            
         }
+        
+//        return Promise<SVGAVideoEntity?> { (filfull, reject) in
+//
+//            guard let theUrl = URL(string: url) else {
+//                reject(KVError(msg: "url is null", code: -1))
+//                KLog("加载svga失败")
+//                return
+//            }
+//
+//            AF.download(theUrl).responseData { (res) in
+//
+//                if let data = res.resumeData {
+//                    parser.parse(with: data, cacheKey: url, completionBlock: { (entity) in
+//                        filfull(entity)
+//
+//                    }) { (error) in
+//                        KLog("解析svga失败, \(error)")
+//                        reject(KVError(msg: "解析svga错误", code: -1))
+//                    }
+//                    return
+//                }
+//
+//                reject(KVError(msg: "加载svga错误", code: -1))
+//                if let error = res.error {
+//                    KLog("加载svga失败 \(error)")
+//                }
+//
+//
+//            }
+//
+//        }
         
     }
     

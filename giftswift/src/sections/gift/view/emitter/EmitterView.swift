@@ -25,17 +25,18 @@ class EmitterView: UIView {
         button.setImage(UIImage(named: "good2_30x30")?.withRenderingMode(.alwaysOriginal), for: .normal)
         button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         self.addSubview(button)
+        button.snp.makeConstraints { (make) in
+            make.right.equalTo(-20)
+            make.width.equalTo(40)
+            make.height.equalTo(40)
+            make.bottom.equalTo(-40-20-20)
+        }
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        
-        button.frame = CGRect(x: self.bounds.width-30-40, y: self.bounds.height-280, width: 40, height: 40)
-    }
     
     @objc func buttonAction() {
         play()

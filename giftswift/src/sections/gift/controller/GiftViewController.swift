@@ -62,6 +62,11 @@ class GiftViewController: KVViewController, KVViewDisplayContext, UITextFieldDel
         tf.delegate = self
         NotificationCenter.default.addObserver(self, selector: #selector(keyBoaedWillShow(notifi:)), name:UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyBoaedWillHide(notifi:)), name:UIResponder.keyboardWillHideNotification, object: nil)
+        if #available(iOS 11.0, *) {
+            self.tfBottom.constant = getIsIPhonexSerious() ? 0 : -20
+        } else {
+            self.tfBottom.constant = -20
+        }
         
         svgaPlayer.frame = self.view.bounds
         self.view.addSubview(svgaPlayer)
@@ -78,7 +83,12 @@ class GiftViewController: KVViewController, KVViewDisplayContext, UITextFieldDel
         ai.stopAnimating()
         
         self.view.addSubview(emitterView)
-        emitterView.frame = self.view.bounds
+        emitterView.snp.makeConstraints { (make) in
+            make.top.equalToSuperview()
+            make.left.equalToSuperview()
+            make.bottom.equalToSuperview()
+            make.right.equalToSuperview()
+        }
         
         initMsgListView()
         initGiftListView()
@@ -133,9 +143,9 @@ class GiftViewController: KVViewController, KVViewDisplayContext, UITextFieldDel
                 UIView.animate(withDuration: t) {
                     self.tf.snp.updateConstraints { (make) in
                         if #available(iOS 11.0, *) {
-                            self.tfBottom.constant = 0//self.view.safeAreaInsets.bottom
+                            self.tfBottom.constant = getIsIPhonexSerious() ? 0 : -20
                         } else {
-                            self.tfBottom.constant = 0
+                            self.tfBottom.constant = -20
                         }
                     }
                     self.view.layoutIfNeeded()
@@ -348,6 +358,8 @@ class GiftViewController: KVViewController, KVViewDisplayContext, UITextFieldDel
             make.right.equalToSuperview()
             make.height.equalTo(300)
         }
+        // 弹幕不可交互
+        danmuView.isUserInteractionEnabled = false
     }
     
     private func fixSubviewsZIndex() {
@@ -355,8 +367,8 @@ class GiftViewController: KVViewController, KVViewDisplayContext, UITextFieldDel
         self.view.sendSubviewToBack(giftListView!)
         self.view.sendSubviewToBack(giftListView!.bgv)
         self.view.sendSubviewToBack(tf)
-        self.view.sendSubviewToBack(svgaButtton)
         self.view.sendSubviewToBack(emitterView)
+        self.view.sendSubviewToBack(svgaButtton)
         self.view.sendSubviewToBack(giftListDisplayContainerView)
         self.view.sendSubviewToBack(danmuView)
         self.view.sendSubviewToBack(gifDisplayView!)

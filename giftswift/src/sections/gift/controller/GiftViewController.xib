@@ -12,7 +12,7 @@
             <connections>
                 <outlet property="svgaButtton" destination="fpB-BD-bu9" id="Ozc-9q-yPH"/>
                 <outlet property="tf" destination="Om9-Df-NFK" id="hvx-aG-iZf"/>
-                <outlet property="tfBottom" destination="XB9-MS-Lev" id="gTa-UX-Xge"/>
+                <outlet property="tfBottom" destination="XB9-MS-Lev" id="u2G-Jq-Hxy"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
