@@ -24,12 +24,14 @@ class GiftViewController: KVViewController, KVViewDisplayContext, UITextFieldDel
     
     private lazy var giftListDisplayContainerView = UIView()
     
+    private lazy var emitterView = EmitterView()
+    
     @IBOutlet weak var tf: UITextField!
     
     @IBOutlet weak var tfBottom: NSLayoutConstraint!
     
     @IBOutlet weak var svgaButtton: UIButton!
-    
+        
     private var bg: UIImageView!
     
     private let giftPlayer = GiftListPlayer()
@@ -75,6 +77,9 @@ class GiftViewController: KVViewController, KVViewDisplayContext, UITextFieldDel
         ai.hidesWhenStopped = true
         ai.stopAnimating()
         
+        self.view.addSubview(emitterView)
+        emitterView.frame = self.view.bounds
+        
         initMsgListView()
         initGiftListView()
         initGifDisplayView()
@@ -86,17 +91,9 @@ class GiftViewController: KVViewController, KVViewDisplayContext, UITextFieldDel
         msgListView!.backgroundColor = .clear
         msgListView?.tableView.backgroundColor = .clear
         danmuView.backgroundColor = .clear
+        emitterView.backgroundColor = .clear
         
-        self.view.sendSubviewToBack(svgaPlayer)
-        self.view.sendSubviewToBack(giftListView!)
-        self.view.sendSubviewToBack(tf)
-        self.view.sendSubviewToBack(giftListView!.bgv)
-        self.view.sendSubviewToBack(svgaPlayer)
-        self.view.sendSubviewToBack(giftListDisplayContainerView)
-        self.view.sendSubviewToBack(danmuView)
-        self.view.sendSubviewToBack(gifDisplayView!)
-        self.view.sendSubviewToBack(msgListView!)
-        self.view.sendSubviewToBack(bg)
+        fixSubviewsZIndex()
                         
         giftPlayer.gifView = gifDisplayView
         giftPlayer.view = giftListDisplayView
@@ -251,17 +248,7 @@ class GiftViewController: KVViewController, KVViewDisplayContext, UITextFieldDel
     }
     
     func svgaPlayerDidFinishedAnimation(_ player: SVGAPlayer!) {
-        self.view.sendSubviewToBack(svgaPlayer)
-        self.view.sendSubviewToBack(giftListView!)
-        self.view.sendSubviewToBack(tf)
-        self.view.sendSubviewToBack(giftListView!.bgv)
-        self.view.sendSubviewToBack(svgaPlayer)
-        self.view.sendSubviewToBack(giftListDisplayContainerView)
-        self.view.sendSubviewToBack(danmuView)
-        self.view.sendSubviewToBack(gifDisplayView!)
-        self.view.sendSubviewToBack(msgListView!)
-        self.view.sendSubviewToBack(bg)
-        
+        fixSubviewsZIndex()
         didMoveView = false
     }
 
@@ -361,6 +348,20 @@ class GiftViewController: KVViewController, KVViewDisplayContext, UITextFieldDel
             make.right.equalToSuperview()
             make.height.equalTo(300)
         }
+    }
+    
+    private func fixSubviewsZIndex() {
+        self.view.sendSubviewToBack(svgaPlayer)
+        self.view.sendSubviewToBack(giftListView!)
+        self.view.sendSubviewToBack(giftListView!.bgv)
+        self.view.sendSubviewToBack(tf)
+        self.view.sendSubviewToBack(svgaButtton)
+        self.view.sendSubviewToBack(emitterView)
+        self.view.sendSubviewToBack(giftListDisplayContainerView)
+        self.view.sendSubviewToBack(danmuView)
+        self.view.sendSubviewToBack(gifDisplayView!)
+        self.view.sendSubviewToBack(msgListView!)
+        self.view.sendSubviewToBack(bg)
     }
     
 }

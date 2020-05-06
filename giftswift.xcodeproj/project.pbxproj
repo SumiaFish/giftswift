@@ -28,6 +28,7 @@
 		0428E6792461276600C48743 /* photographer_compressed.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0428E6782461276600C48743 /* photographer_compressed.jpg */; };
 		0428E67B246137DE00C48743 /* SVGAPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0428E67A246137DE00C48743 /* SVGAPresent.swift */; };
 		0428E67D246138C700C48743 /* SVGAData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0428E67C246138C700C48743 /* SVGAData.swift */; };
+		04390CF2246250E50085A10E /* EmitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04390CF1246250E50085A10E /* EmitterView.swift */; };
 		04490F44246190A000D4816A /* v2-9d6cc73533f302e308b5b1ca5fac51df_1200x500.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04490F432461909F00D4816A /* v2-9d6cc73533f302e308b5b1ca5fac51df_1200x500.jpg */; };
 		04490F46246197DB00D4816A /* unnamed.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04490F45246197DA00D4816A /* unnamed.jpg */; };
 		04490F4A2461AEDB00D4816A /* NSData+Compression.m in Sources */ = {isa = PBXBuildFile; fileRef = 04490F492461AEDB00D4816A /* NSData+Compression.m */; };
@@ -108,6 +109,7 @@
 		0428E6782461276600C48743 /* photographer_compressed.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photographer_compressed.jpg; sourceTree = "<group>"; };
 		0428E67A246137DE00C48743 /* SVGAPresent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVGAPresent.swift; sourceTree = "<group>"; };
 		0428E67C246138C700C48743 /* SVGAData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVGAData.swift; sourceTree = "<group>"; };
+		04390CF1246250E50085A10E /* EmitterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmitterView.swift; sourceTree = "<group>"; };
 		04490F432461909F00D4816A /* v2-9d6cc73533f302e308b5b1ca5fac51df_1200x500.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "v2-9d6cc73533f302e308b5b1ca5fac51df_1200x500.jpg"; sourceTree = "<group>"; };
 		04490F45246197DA00D4816A /* unnamed.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = unnamed.jpg; sourceTree = "<group>"; };
 		04490F472461AEDA00D4816A /* giftswift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "giftswift-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -242,6 +244,14 @@
 				04CDC05E245CBC29003152A1 /* GiftViewController.xib */,
 			);
 			path = controller;
+			sourceTree = "<group>";
+		};
+		04390CF0246250A10085A10E /* emitter */ = {
+			isa = PBXGroup;
+			children = (
+				04390CF1246250E50085A10E /* EmitterView.swift */,
+			);
+			path = emitter;
 			sourceTree = "<group>";
 		};
 		04B3C0782460E21100067A78 /* danmu */ = {
@@ -390,6 +400,7 @@
 		04CDC063245CC1C0003152A1 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				04390CF0246250A10085A10E /* emitter */,
 				04B3C0782460E21100067A78 /* danmu */,
 				0422C384245DFB9D00DDB0D0 /* player */,
 				0422C383245DFB9100DDB0D0 /* msgList */,
@@ -725,6 +736,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04CDC04A245CACC4003152A1 /* KVNavigationController.swift in Sources */,
+				04390CF2246250E50085A10E /* EmitterView.swift in Sources */,
 				04B3C07A2460E25500067A78 /* DanMuView.swift in Sources */,
 				0422C37B245DAC7B00DDB0D0 /* WeakArray.swift in Sources */,
 				0422C36E245D888B00DDB0D0 /* MsgData.swift in Sources */,
