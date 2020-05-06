@@ -332,7 +332,7 @@ class GiftViewController: KVViewController, KVViewDisplayContext, UITextFieldDel
             view.snp.makeConstraints { (make) in
                 make.left.equalToSuperview()
                 make.right.equalToSuperview()
-                make.bottom.equalToSuperview()
+                make.bottom.equalTo(tf).offset(0)
                 make.height.equalTo(320)
             }
             view.present = MsgPrensent()
@@ -346,7 +346,7 @@ class GiftViewController: KVViewController, KVViewDisplayContext, UITextFieldDel
         if let view = giftListDisplayView {
             self.view.addSubview(giftListDisplayContainerView)
             giftListDisplayContainerView.snp.makeConstraints { (make) in
-                make.bottom.equalTo(0-300-20)
+                make.bottom.equalTo(self.msgListView!.snp.top).offset(0)
                 make.left.equalToSuperview().offset(20)
                 make.width.equalTo(240)
                 make.height.equalTo(50*GiftDisplayListMaxCount+Int(ItemSpace)*GiftDisplayListMaxCount-1)
