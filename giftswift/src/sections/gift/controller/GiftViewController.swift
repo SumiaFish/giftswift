@@ -318,7 +318,7 @@ class GiftViewController: KVViewController, KVViewDisplayContext, UITextFieldDel
                 make.left.equalToSuperview()
                 make.right.equalToSuperview()
                 make.top.equalTo(0)
-                make.height.equalTo(400)
+                make.bottom.equalTo(self.msgListView!.snp.top).offset(0)
             }
             view.displayContext = self
             
@@ -333,7 +333,7 @@ class GiftViewController: KVViewController, KVViewDisplayContext, UITextFieldDel
                 make.left.equalToSuperview()
                 make.right.equalToSuperview()
                 make.bottom.equalTo(tf).offset(0)
-                make.height.equalTo(320)
+                make.height.equalTo((self.view.bounds.width/375.0)*320.0)
             }
             view.present = MsgPrensent()
             view.present?.msgListView = view
@@ -377,7 +377,7 @@ class GiftViewController: KVViewController, KVViewDisplayContext, UITextFieldDel
             make.top.equalTo(64 + (getIsIPhonexSerious() ? 20 : 0) )
             make.left.equalToSuperview()
             make.right.equalToSuperview()
-            make.height.equalTo(300)
+            make.bottom.equalTo(self.msgListView!.snp.top).offset(0)
         }
         // 弹幕不可交互
         danmuView.isUserInteractionEnabled = false

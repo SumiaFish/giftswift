@@ -1,6 +1,0 @@
-framework module Pods_giftswift {
-  umbrella header "Pods-giftswift-umbrella.h"
-
-  export *
-  module * { export * }
-}
